@@ -13,9 +13,20 @@ void Print(int* p, int size) {
 	}
 }
 
+int MinIndex(int* p, int size) {
+	int min = p[0]; int a;
+	for (int i = 0; i < size; i++) {
+		if (min > p[i]) {
+			min = p[i];			a = i;
+		}
+	}
+	return a;
+}
+
 int main() {
-	int size = 10;
+	int size = 10, index;
 	int* p = new int[size];
 	Fulling(p, size);
 	Print(p, size);
+	index = MinIndex(p, size);
 }
