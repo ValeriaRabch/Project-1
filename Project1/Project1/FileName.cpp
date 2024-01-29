@@ -23,10 +23,15 @@ int MinIndex(int* p, int size) {
 	return a;
 }
 
+void Delete(int* p) {
+	delete[] p;
+}
+
 int main() {
 	int size = 10, index;
 	int* p = new int[size];
 	Fulling(p, size);
 	Print(p, size);
 	index = MinIndex(p, size);
+	Delete(p);
 }
